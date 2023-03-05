@@ -1,0 +1,19 @@
+<h3>CONSULTA PARTICULAS</h3>
+<hr>
+<table class="table table-striped">
+  <thead>
+    <tr class="table-primary">
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Subtipo</th>
+
+    </tr>
+  </thead>
+  <tbody *ngFor="let particula of particulas[1]">
+    <th>{{particula.idparticula}}</th>
+    <th><a [routerLink]="['/particulas', particula.idparticula]">{{particula.nombre}}</a></th>
+    <th>{{particula.tipo}}</th>
+    <th>{{particula.subtipo}}</th>
+  </tbody>
+</table>

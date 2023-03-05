@@ -1,0 +1,22 @@
+<section id='datos'>
+  <span id='descmasa'>Masa</span>
+  <span id='descarga'>Carga</span>
+  <span id='descspin'>Spin</span>
+  <div  [ngClass]="particula_color">
+    <div id='masa' class='fontdatos'>{{particula[1].masa}}</div>
+    <div class='flex'>
+      <div id='otrosdatos' >
+        <div id='carga' class='fontdatos'>{{particula[1].idparticula}}</div>
+        <div id='spin' class='fontdatos'>{{particula[1].spin}}</div>
+      </div>
+      <div id='simbolo' class='fontsimbolo'>{{particula[1].simbolo}}</div>
+    </div>
+    <div id='nombre' class='fontdatos'>{{particula[1].nombre}}</div>
+  </div>
+  <br><br>
+  <div class='infoparticula'>
+    <strong>Existencia verificada:  <span id='verificada'>{{particula[1].verificada}}</span></strong>
+    <br><br>
+    <div id='descripcion'>{{particula[1].descripcion}}</div>
+  </div>
+</section>

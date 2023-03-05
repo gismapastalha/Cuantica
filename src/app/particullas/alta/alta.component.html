@@ -1,0 +1,77 @@
+<h3>PROYECTO EUREKA: DESCUBRIMIENTO NUEVA PARTÍCULA</h3>
+<hr>
+<form [noValidate]="false" #formulario="ngForm"  (ngSubmit)="altaParticula()">
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Tipo</label>
+    <div class="col-md-8">
+      <select class="form-control" name="tipo">
+        <option disabled selected>Seleccionar un tipo</option>
+        <option>Fermiones</option>
+        <option>Bosones</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Subtipo</label>
+    <div class="col-md-8">
+      <select class="form-control" name="subtipo">
+        <option disabled selected>Seleccionar un subtipo</option>
+        <option>Quarks</option>
+        <option>Leptones</option>
+        <option>Sin tipo</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="nombre" class="col-2 col-form-label">Nombre</label>
+    <div class="col-8">
+      <input name="nombre"  [(ngModel)]="particula[1].nombre" class="form-control" type="text" placeholder="Nombre" required #nombre="ngModel">
+      <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)"  class="alert alert-danger">
+        <span *ngIf="nombre.errors">Nombre particula es obligatorio</span>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="masa" class="col-2 col-form-label">Masa</label>
+    <div class="col-8">
+      <input name="masa" [(ngModel)]="particula[1].masa" class="form-control" type="text" placeholder="Masa" required #masa="ngModel">
+      <div  *ngIf="masa.invalid && (masa.dirty || masa.touched)"  class="alert alert-danger">
+        <span *ngIf="masa.errors">masa particula es obligatoria</span>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="carga" class="col-2 col-form-label">Carga</label>
+    <div class="col-8">
+      <input name="carga" [(ngModel)]="particula[1].carga" class="form-control" type="text" placeholder="Carga" required #carga="ngModel">
+      <div  *ngIf="carga.invalid && (carga.dirty || carga.touched)"  class="alert alert-danger">
+        <span *ngIf="carga.errors">carga particula es obligatoria</span>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="spin" class="col-2 col-form-label">Spin</label>
+    <div class="col-8">
+      <input name="spin" [(ngModel)]="particula[1].carga" class="form-control" type="text" placeholder="Spin" required #spin="ngModel">
+      <div *ngIf="spin.invalid && (spin.dirty || spin.touched)"  class="alert alert-danger">
+        <span *ngIf="spin.errors">spin particula es obligatorio</span>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="simbolo" class="col-2 col-form-label">Simbolo</label>
+    <div class="col-8">
+      <input name="simbolo" [(ngModel)]="particula[1].simbolo" class="form-control" type="text" placeholder="Simbolo" required #simbolo="ngModel">
+      <div *ngIf="simbolo.invalid && (simbolo.dirty || simbolo.touched)"  class="alert alert-danger">
+        <span *ngIf="simbolo.errors">simbolo particula es obligatorio</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">&nbsp;</label>
+    <div class="input-group col-md-8">
+      <button type="submit" (ngSubmit)="altaParticula()" class="btn btn-outline-primary"  [disabled]="formulario.invalid">Alta partícula</button>
+    </div>
+  </div>
+</form>

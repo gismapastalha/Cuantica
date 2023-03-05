@@ -1,0 +1,32 @@
+* {padding:0;}
+main {
+  width: 70%; max-width: 1200px; margin: 50px auto;
+}
+.jumbotron{background:steelblue;}
+h1 {text-align: center;}
+h3 {margin-top: 30px; text-align: center;}
+a, td {color: rgb(24, 26, 3)}
+pre {text-align: center;}
+
+section#datos {width: 40%; margin: 50px auto}
+div.particula {width: 250px; border:2px solid black; height: 304px;margin:auto; box-shadow: 5px 5px 2px grey; color:black;}
+.inline {display: inline-block; vertical-align: top}
+.flex {display: flex; justify-content: center;}
+div#masa {height: 75px}
+div#carga {height: 75px; width: 80px}
+div#spin {height: 75px; width: 80px}
+div#simbolo {height: 150px; width: 190px}
+div#nombre {height: 75px;justify-content: center;margin-left: 0px;}
+.fontdatos {font-size: 28px; display:flex;justify-content: flex-start;align-items: center;margin-left: 10px;}
+.fontsimbolo {font-size: 80px; display:flex;justify-content: center;align-items: center;}
+#datos {position: relative;}
+#descmasa {position: absolute; top: 25px; left:-50px; font-weight: bold;}
+#descarga {position: absolute; top: 100px; left:-50px; font-weight: bold;}
+#descspin {position: absolute; top: 175px; left:-50px; font-weight: bold;}
+#listaparticulas {font-size:0.8em;}
+.infoparticula {font-size:0.8em;}
+.colorpink {background-color: pink;}
+.colorgreen {background-color: lightgreen;}
+.colororange {background-color: orange;}
+.coloryellow {background-color: yellow;}
+.transparent {background-color: transparent;}
